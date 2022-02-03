@@ -28,8 +28,8 @@ export default {
   font-family: Racing Sans One;
   font-size: 36px;
   line-height: 45px;
-  color: #fff;
-  border: 7px solid #fff;
+  color: #000;
+  border: 7px solid #000;
   box-sizing: border-box;
   border-radius: 30px;
   width: fit-content;
@@ -39,7 +39,7 @@ export default {
   left: 50vw;
   transform: translate(-50%, 0);
   // z-index: 99;
-  background: rgba(255, 255, 255, 0.23);
+  background: rgba(255, 255, 255, 0);
   &:hover {
     cursor: pointer;
   }
