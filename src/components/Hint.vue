@@ -10,7 +10,7 @@
             粉絲專頁。
           </li>
           <li>2. 私訊並按下「開始使用」。</li>
-          <li>3. 祝您有美好的遊戲體驗。</li>
+          <li>3. 祝您有美好的遊戲體驗～</li>
         </ul>
       </div>
     </div>
@@ -21,10 +21,7 @@
 export default {
   methods: {
     handleClick() {
-      window.open(
-        "https://www.facebook.com/ThePossibleMemoirsOfATraitor",
-        "_blank"
-      );
+      window.open("https://www.facebook.com/DaysWeStaredAtTheSun", "_blank");
     },
   },
 };
@@ -37,6 +34,7 @@ export default {
   text-align: center;
   @media (min-width: 768px) {
     padding: 50px 70px;
+    text-align: start;
   }
 
   &__section {
