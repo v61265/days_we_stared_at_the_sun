@@ -22,10 +22,12 @@
       <Intro v-show="openModal === 'intro'" />
       <About v-show="openModal === 'about'" />
       <Time v-show="openModal === 'time'" :time="time" />
+      <Start v-show="openModal === 'start'" />
     </Modal>
     <StartButton
       @mouseover="handleHOverStart(true)"
       @mouseleave="handleHOverStart(false)"
+      @click.native="setModal('start')"
     />
   </div>
 </template>
@@ -37,10 +39,11 @@ import Intro from "./components/Intro.vue";
 import Modal from "./components/Modal.vue";
 import About from "./components/About.vue";
 import Time from "./components/Time.vue";
+import Start from "./components/Hint.vue";
 
 export default {
   name: "App",
-  components: { StartButton, Intro, Modal, About, Time },
+  components: { StartButton, Intro, Modal, About, Time, Start },
   data() {
     return {
       isMobile: true,
@@ -55,7 +58,7 @@ export default {
   },
   computed: {
     time() {
-      var date = new Date("2022-02-03 22:00:00");
+      var date = new Date("2022-02-03 23:30:00");
       var date_ts = date.getTime() + 1000 * this.duration;
       return moment(date_ts).format("HH : mm");
     },
@@ -107,7 +110,7 @@ export default {
       this.isHoverStart = boolean;
     },
     setModal(value) {
-      if (!this.isMobile) return;
+      if (!this.isMobile && value !== "start") return (this.openModal = null);
       this.openModal = value;
     },
     handleIntroEnd(e) {
