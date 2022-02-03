@@ -55,7 +55,7 @@ export default {
   },
   computed: {
     time() {
-      var date = new Date("2022-02-03 19:00:00");
+      var date = new Date("2022-02-03 22:00:00");
       var date_ts = date.getTime() + 1000 * this.duration;
       return moment(date_ts).format("HH : mm");
     },
