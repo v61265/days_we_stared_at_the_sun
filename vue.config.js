@@ -1,6 +1,4 @@
 module.exports = {
   publicPath:
-    process.env.NODE_ENV === "production"
-      ? "/the_possible_memoirs_of_a_traitor/"
-      : "/",
+    process.env.NODE_ENV === "production" ? "/days_we_stared_at_the_sun/" : "/",
 };
